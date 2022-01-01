@@ -1,0 +1,32 @@
+{
+    "request": {
+        "urlPath": "/testleaf/traning/course",
+        "method": "GET",
+        "queryParameters": {
+        		"course_name": {
+        			"matches": ".*"
+        		},
+        		"type": {
+        			"matches": ".*"
+        		}
+        }
+    },
+    "response": {
+       "jsonBody":{
+       		"Course Details":[
+       			{
+       				"course"	: "{{request.query.course_name}}",
+       				"type"		: "{{request.query.type}}",
+       				"fee"		: "Rs: {{randomValue length=4 type='NUMERIC'}}",
+       				"time"		: "{{now offset='1 days' format='yyyy-MM-dd hh:mm:ssz'}}"       				
+       			},
+       			{
+       				"course"	: "{{request.query.course_name}}",
+       				"type"		: "{{request.query.type}}",
+       				"fee"		: "Rs: {{randomValue length=4 type='NUMERIC'}}",
+       				"time"		: "{{now offset='30 days' format='yyyy-MM-dd hh:mm:ssz'}}"       				
+       			}
+       		]
+       }
+    }
+}
