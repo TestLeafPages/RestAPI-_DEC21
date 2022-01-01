@@ -1,0 +1,180 @@
+swagger: "2.0"
+info:
+  description: "Use built-in best practices to rapidly consolidate disparate tools to a single system of engagement in the cloud. Harness your shared data and analytics with the most trusted IT service workflows."
+  version: "1.0.0"
+  title: "ServiceNow"
+  termsOfService: "https://www.servicenow.com/terms-of-use.html"
+  contact:
+    email: "apiteam@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "dev113226.service-now.com"
+basePath: "/api/now/table"
+tags:
+- name: "incident"
+  description: "Everything about your incident"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+- name: "change request"
+  description: "Everything about your change request"
+schemes:
+- "https"
+
+paths:
+  /incident:
+    post:
+      tags:
+      - "incident"
+      summary: "Add a new incident to the serviceNow"
+      description: ""
+      operationId: "addIncident"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "incident that needs to be added to the serviceNow"
+        required: true
+        schema:
+          $ref: "#/definitions/Incidentbody"
+      responses:
+        "201":
+          description: "Created"
+        "405":
+          description: "Invalid input"
+      security:
+      - serviceNow_auth:
+        - "write:serviceNow"
+        - "read:serviceNow"
+    put:
+      tags:
+      - "incident"
+      summary: "Update an existing incident"
+      description: ""
+      operationId: "updateIncident"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "incident object that needs to be added to the serviceNow"
+        required: true
+        schema:
+          $ref: "#/definitions/Incidentbody"
+      responses:
+        "200":
+          description: "good"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Pet not found"
+        "405":
+          description: "Validation exception"
+      security:
+      - serviceNow_auth:
+        - "write:serviceNow"
+        - "read:serviceNow"
+ 
+  /incident/{sys_id}:
+    get:
+      tags:
+      - "incident"
+      summary: "Find incident by ID"
+      description: "Returns a single incident"
+      operationId: "getIncidentById"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        description: "ID of pet to return"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Incident"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Pet not found"
+      security:
+      - serviceNow_auth:
+        - "write:serviceNow"
+        - "read:serviceNow"
+ 
+    delete:
+      tags:
+      - "incident"
+      summary: "Deletes a incident"
+      description: ""
+      operationId: "deleteincident"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "sys_id"
+        in: "path"
+        description: "ID of pet to return"
+        required: true
+        type: "string"
+      responses:
+        "204":
+          description: "data removed"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: " not found"
+      security:
+      - serviceNow_auth:
+        - "write:serviceNow"
+        - "read:serviceNow"
+  
+ 
+securityDefinitions:
+  serviceNow_auth:
+    type: "oauth2"
+    authorizationUrl: "https://dev113226.service-now.com/oauth_auth.do"
+    tokenUrl: "https://dev113226.service-now.com/oauth_token.do"
+    flow: "accessCode"
+    scopes:
+      write:serviceNow: "modify incident in your account"
+      read:serviceNow: "read your incident"
+  api_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+    
+    
+definitions:
+  Incident:
+    type: "object"
+    properties:
+      sys_id:
+        type: "string"
+  Incidentbody:
+    type: "object"
+    properties:
+      short_description:
+        type: "string"
+      category:
+        type: "string"
+    xml:
+      name: "Incidentbody"
+  
+  
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
