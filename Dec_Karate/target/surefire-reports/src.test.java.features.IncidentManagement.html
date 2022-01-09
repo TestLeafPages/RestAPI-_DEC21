@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.features.IncidentManagement</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">3</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2022-01-09 10:45:58 AM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:3]">[1:3] Get All Incident </a>
+</div>
+<div class="nav-item passed">
+<a href="#[2:20]">[2:20] create a new incident without body </a>
+</div>
+<div class="nav-item passed">
+<a href="#[3:32]">[3:32] create a new incident with body </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/features/IncidentManagement.feature</span><span class="feature-description">IncidentManagement</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:3]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:3]</span><span class="scenario-name">Get All Incident </span>
+</div>
+<div class="scenario-time passed">ms: 3115</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment"># Set Endpoint</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref passed">1</div>
+<div class="step-cell passed">Given url 'https://dev113226.service-now.com/api/now/table/incident'</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="preformatted" data-parent="1">10:45:51.568 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment"># Set Authorization</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">And header Authorization = 'Basic YWRtaW46VHVuYUAxMjM='</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">And header accept = 'application/xml'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment"># add query param</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">And param sysparm_fields = 'number,sys_id,category,short_description'</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment"># send request method</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">When method get</div>
+</div>
+<div class="time-cell passed">3003</div>
+</div>
+<div class="preformatted" data-parent="5">10:45:52.825 request:
+1 &gt; GET https://dev113226.service-now.com/api/now/table/incident?sysparm_fields=number%2Csys_id%2Ccategory%2Cshort_description
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic YWRtaW46VHVuYUAxMjM=
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: dev113226.service-now.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_171)
+1 &gt; accept: application/xml
+
+10:45:54.588 response time in milliseconds: 1555.30
+1 &lt; 200
+1 &lt; Cache-Control: no-cache,no-store,must-revalidate,max-age=-1
+1 &lt; Content-Type: application/xml;charset=UTF-8
+1 &lt; Date: Sun, 09 Jan 2022 05:15:53 GMT
+1 &lt; Expires: 0
+1 &lt; Pragma: no-store,no-cache
+1 &lt; Server: ServiceNow
+1 &lt; Set-Cookie: [JSESSIONID=9BBAFE741DE19EE2426E6CFEC836E3D7; Path=/; HttpOnly; SameSite=None; Secure, glide_user=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; SameSite=None; Secure, glide_user_session=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; SameSite=None; Secure, glide_user_route=glide.84aa906d3f1f86e696bf04d5fa8bcc57; Max-Age=2147483647; Expires=Fri, 27-Jan-2090 08:30:00 GMT; Path=/; HttpOnly; SameSite=None; Secure, glide_session_store=240916BF1B7C01106FAA2134604BCB40; Max-Age=1800; Expires=Sun, 09-Jan-2022 05:45:53 GMT; Path=/; HttpOnly; SameSite=None; Secure, BIGipServerpool_dev113226=210087690.56126.0000; path=/; Httponly; Secure; SameSite=None; Secure]
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Is-Logged-In: true
+1 &lt; X-Total-Count: 219
+1 &lt; X-Transaction-ID: 680916bf1b7c
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;response&gt;&lt;result&gt;&lt;number&gt;INC0009002&lt;/number&gt;&lt;sys_id&gt;1c832706732023002728660c4cf6a7b9&lt;/sys_id&gt;&lt;short_description&gt;My computer is not detecting the headphone device&lt;/short_description&gt;&lt;category&gt;Hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000009&lt;/number&gt;&lt;sys_id&gt;46b66a40a9fe198101f243dfbc79033d&lt;/sys_id&gt;&lt;short_description&gt;Reset my password&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000010&lt;/number&gt;&lt;sys_id&gt;46b9490da9fe1981003c938dab89bda3&lt;/sys_id&gt;&lt;short_description&gt;Need Oracle 10GR2 installed&lt;/short_description&gt;&lt;category&gt;database&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000011&lt;/number&gt;&lt;sys_id&gt;46c03489a9fe19810148cd5b8cbf501e&lt;/sys_id&gt;&lt;short_description&gt;Need new Blackberry set up&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000012&lt;/number&gt;&lt;sys_id&gt;46c88ac1a9fe1981014de1c831fbcf6d&lt;/sys_id&gt;&lt;short_description&gt;Customer didn't receive eFax&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000013&lt;/number&gt;&lt;sys_id&gt;46cebb88a9fe198101aee93734f9768b&lt;/sys_id&gt;&lt;short_description&gt;EMAIL is slow when an attachment is involved&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000014&lt;/number&gt;&lt;sys_id&gt;46e18c0fa9fe19810066a0083f76bd56&lt;/sys_id&gt;&lt;short_description&gt;Missing my home directory&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000021&lt;/number&gt;&lt;sys_id&gt;46ee0924a9fe198100f1cf78c198454a&lt;/sys_id&gt;&lt;short_description&gt;New employee hire&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000024&lt;/number&gt;&lt;sys_id&gt;46ee8c2fa9fe198100623592c70d643e&lt;/sys_id&gt;&lt;short_description&gt;Issue with a web page on wiki&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000026&lt;/number&gt;&lt;sys_id&gt;46f1784ba9fe19810018aa27fbb23482&lt;/sys_id&gt;&lt;short_description&gt;Seem to have an issue with my hard drive...&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000028&lt;/number&gt;&lt;sys_id&gt;46f3ee0ea9fe198100c5c0e53d5abe0b&lt;/sys_id&gt;&lt;short_description&gt;My disk is still having issues. Can't delete a file&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000030&lt;/number&gt;&lt;sys_id&gt;46f6ede0a9fe198100e10154c34a0c2a&lt;/sys_id&gt;&lt;short_description&gt;Lost connection to the wireless network&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000032&lt;/number&gt;&lt;sys_id&gt;47079b68a9fe198100a614a4c225c88d&lt;/sys_id&gt;&lt;short_description&gt;EMAIL Server Down Again&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000033&lt;/number&gt;&lt;sys_id&gt;470af5afa9fe198101b324dd773ef379&lt;/sys_id&gt;&lt;short_description&gt;File Server is 80% full - Needs upgrade&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000034&lt;/number&gt;&lt;sys_id&gt;470d51a0a9fe1981006c20c825e48933&lt;/sys_id&gt;&lt;short_description&gt;Does not look like a backup occurred last night&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000035&lt;/number&gt;&lt;sys_id&gt;47138238a9fe1981016e3762d1fd26d4&lt;/sys_id&gt;&lt;short_description&gt;Reset my password&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000036&lt;/number&gt;&lt;sys_id&gt;4714a2aca9fe198100ecabacf6273482&lt;/sys_id&gt;&lt;short_description&gt;Issue with networking&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000038&lt;/number&gt;&lt;sys_id&gt;4717dfe5a9fe198100450448b2404c16&lt;/sys_id&gt;&lt;short_description&gt;my PDF docs are all locked from editing&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000006&lt;/number&gt;&lt;sys_id&gt;8d6246c7c0a80164012fb063cecd4ace&lt;/sys_id&gt;&lt;short_description&gt;Hangs when trying to print VISIO document&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000008&lt;/number&gt;&lt;sys_id&gt;8d641046c0a80164000bc7c0d3ed46a0&lt;/sys_id&gt;&lt;short_description&gt;Printer in my office is out of toner&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000001&lt;/number&gt;&lt;sys_id&gt;9c573169c611228700193229fff72400&lt;/sys_id&gt;&lt;short_description&gt;Can't read email&lt;/short_description&gt;&lt;category&gt;network&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000004&lt;/number&gt;&lt;sys_id&gt;9d3c1197c611228701cd1d94bc32d76d&lt;/sys_id&gt;&lt;short_description&gt;Forgot email password&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000601&lt;/number&gt;&lt;sys_id&gt;9e7f9864532023004247ddeeff7b121f&lt;/sys_id&gt;&lt;short_description&gt;The USB port on my PC stopped working&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0009003&lt;/number&gt;&lt;sys_id&gt;9fffc328731823002728660c4cf6a742&lt;/sys_id&gt;&lt;short_description&gt;Cannot sign into the company portal app&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0009004&lt;/number&gt;&lt;sys_id&gt;e329de99731423002728660c4cf6a73c&lt;/sys_id&gt;&lt;short_description&gt;Defect tracking tool is down.&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000005&lt;/number&gt;&lt;sys_id&gt;e8e875b0c0a80164009dc852b4d677d5&lt;/sys_id&gt;&lt;short_description&gt;CPU load high for over 10 minutes&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010072&lt;/number&gt;&lt;sys_id&gt;0072821f1b2c01106faa2134604bcbc7&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010126&lt;/number&gt;&lt;sys_id&gt;03403b1b1b6041106faa2134604bcb33&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010098&lt;/number&gt;&lt;sys_id&gt;03b2a2171bac01106faa2134604bcba2&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010069&lt;/number&gt;&lt;sys_id&gt;050f2d9f1be801106faa2134604bcb0a&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010037&lt;/number&gt;&lt;sys_id&gt;092d09cb1b2001106faa2134604bcbf2&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010002&lt;/number&gt;&lt;sys_id&gt;0945f4301be401106faa2134604bcb56&lt;/sys_id&gt;&lt;short_description&gt;create incident with body json&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010039&lt;/number&gt;&lt;sys_id&gt;0e9f890f1b2001106faa2134604bcb45&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010089&lt;/number&gt;&lt;sys_id&gt;0ed122d31bac01106faa2134604bcbd8&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010030&lt;/number&gt;&lt;sys_id&gt;0f7505471b2001106faa2134604bcba8&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010005&lt;/number&gt;&lt;sys_id&gt;0ff2c5381be401106faa2134604bcb13&lt;/sys_id&gt;&lt;short_description&gt;create incident with body json&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010021&lt;/number&gt;&lt;sys_id&gt;13935e011b6441106faa2134604bcbc9&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010029&lt;/number&gt;&lt;sys_id&gt;15d041431b2001106faa2134604bcb9c&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010165&lt;/number&gt;&lt;sys_id&gt;1b08d23f1b7c01106faa2134604bcbed&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010071&lt;/number&gt;&lt;sys_id&gt;1ba1069b1b2c01106faa2134604bcbf3&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010045&lt;/number&gt;&lt;sys_id&gt;1c12918f1b2001106faa2134604bcb65&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010066&lt;/number&gt;&lt;sys_id&gt;1d06cfc71b6401106faa2134604bcba4&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010028&lt;/number&gt;&lt;sys_id&gt;1eef5e451b6441106faa2134604bcb15&lt;/sys_id&gt;&lt;short_description&gt;Create incident with body data 2&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010105&lt;/number&gt;&lt;sys_id&gt;20e3e2971bac01106faa2134604bcbca&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010133&lt;/number&gt;&lt;sys_id&gt;2121de8c1b3001106faa2134604bcbdc&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010056&lt;/number&gt;&lt;sys_id&gt;22671d831b6001106faa2134604bcbcc&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010057&lt;/number&gt;&lt;sys_id&gt;23771d431b6001106faa2134604bcbe2&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010068&lt;/number&gt;&lt;sys_id&gt;24e99bc31ba401106faa2134604bcbb4&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010129&lt;/number&gt;&lt;sys_id&gt;25ee06481b3001106faa2134604bcb91&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010116&lt;/number&gt;&lt;sys_id&gt;29467a531bec01106faa2134604bcb67&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010040&lt;/number&gt;&lt;sys_id&gt;29bfc14f1b2001106faa2134604bcb4e&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010117&lt;/number&gt;&lt;sys_id&gt;2a1abad31bec01106faa2134604bcb5a&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010158&lt;/number&gt;&lt;sys_id&gt;2c445a7b1b7c01106faa2134604bcb36&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010163&lt;/number&gt;&lt;sys_id&gt;2dc5d23f1b7c01106faa2134604bcbfe&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010026&lt;/number&gt;&lt;sys_id&gt;30ef96851b6441106faa2134604bcb4e&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010137&lt;/number&gt;&lt;sys_id&gt;32c399111b7001106faa2134604bcba0&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010013&lt;/number&gt;&lt;sys_id&gt;358619f41b2801106faa2134604bcbd7&lt;/sys_id&gt;&lt;short_description&gt;create incident with body json&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010162&lt;/number&gt;&lt;sys_id&gt;379596fb1b7c01106faa2134604bcbd0&lt;/sys_id&gt;&lt;short_description&gt;Created using katate&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010082&lt;/number&gt;&lt;sys_id&gt;39af56931bac01106faa2134604bcb10&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010124&lt;/number&gt;&lt;sys_id&gt;3b901f131b2041106faa2134604bcbc3&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010006&lt;/number&gt;&lt;sys_id&gt;3cb481b81be401106faa2134604bcb85&lt;/sys_id&gt;&lt;short_description&gt;create incident with body json&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010053&lt;/number&gt;&lt;sys_id&gt;3d16dd031b6001106faa2134604bcb6c&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010063&lt;/number&gt;&lt;sys_id&gt;3fb05a471be001106faa2134604bcbae&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010065&lt;/number&gt;&lt;sys_id&gt;4359ee071b2401106faa2134604bcb2c&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010081&lt;/number&gt;&lt;sys_id&gt;437fda531bac01106faa2134604bcb2a&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010060&lt;/number&gt;&lt;sys_id&gt;43cf910b1b6001106faa2134604bcba4&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010049&lt;/number&gt;&lt;sys_id&gt;452459cf1b2001106faa2134604bcb93&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000015&lt;/number&gt;&lt;sys_id&gt;46e2fee9a9fe19810049b49dee0daf58&lt;/sys_id&gt;&lt;short_description&gt;I can't launch my VPN client since the last software update&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000016&lt;/number&gt;&lt;sys_id&gt;46e3e949a9fe19810069b824ba2c761a&lt;/sys_id&gt;&lt;short_description&gt;Rain is leaking on main DNS Server&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000017&lt;/number&gt;&lt;sys_id&gt;46e482d9a9fe198101d3e3f3e2a14459&lt;/sys_id&gt;&lt;short_description&gt;How do I create a sub-folder&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000018&lt;/number&gt;&lt;sys_id&gt;46e57642a9fe1981000b96a5dca501ff&lt;/sys_id&gt;&lt;short_description&gt;Sales forecast spreadsheet is READ ONLY&lt;/short_description&gt;&lt;category/&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000019&lt;/number&gt;&lt;sys_id&gt;46e8219ba9fe1981013806b6e04fed06&lt;/sys_id&gt;&lt;short_description&gt;Can't launch 64-bit Windows 7 virtual machine&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000020&lt;/number&gt;&lt;sys_id&gt;46edaa6aa9fe198101b9d14ced16619f&lt;/sys_id&gt;&lt;short_description&gt;I need a replacement iPhone, please&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000025&lt;/number&gt;&lt;sys_id&gt;46f09e75a9fe198100f4ffd8d366d17b&lt;/sys_id&gt;&lt;short_description&gt;Need to add more memory to laptop&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000027&lt;/number&gt;&lt;sys_id&gt;46f4f4dfa9fe198100063e60278f76ec&lt;/sys_id&gt;&lt;short_description&gt;Please remove the latest hotfix from my PC&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000029&lt;/number&gt;&lt;sys_id&gt;46f67787a9fe198101e06dfcf3a78e99&lt;/sys_id&gt;&lt;short_description&gt;I can't get my weather report&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000031&lt;/number&gt;&lt;sys_id&gt;47064b68a9fe19810186793eefffc9b7&lt;/sys_id&gt;&lt;short_description&gt;Need help with Remedy. Can we configure UI?&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000037&lt;/number&gt;&lt;sys_id&gt;4715ab62a9fe1981018c3efb96143495&lt;/sys_id&gt;&lt;short_description&gt;Request for a new service&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000039&lt;/number&gt;&lt;sys_id&gt;471bfbc7a9fe198101e77a3e10e5d47f&lt;/sys_id&gt;&lt;short_description&gt;Trouble getting to Oregon mail server&lt;/short_description&gt;&lt;category&gt;network&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000040&lt;/number&gt;&lt;sys_id&gt;471d4732a9fe198100affbf655e59172&lt;/sys_id&gt;&lt;short_description&gt;JavaScript error on hiring page of corporate website&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000041&lt;/number&gt;&lt;sys_id&gt;471eb058a9fe198100f89592e1ea93d3&lt;/sys_id&gt;&lt;short_description&gt;My desk phone does not work&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000044&lt;/number&gt;&lt;sys_id&gt;47204688a9fe1981011a20af100f381a&lt;/sys_id&gt;&lt;short_description&gt;Can't log into SAP from my laptop today&lt;/short_description&gt;&lt;category/&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010044&lt;/number&gt;&lt;sys_id&gt;49611d8f1b2001106faa2134604bcb46&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010131&lt;/number&gt;&lt;sys_id&gt;4cc01a4c1b3001106faa2134604bcbc6&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010115&lt;/number&gt;&lt;sys_id&gt;505dea971bac01106faa2134604bcb98&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010136&lt;/number&gt;&lt;sys_id&gt;54f9091d1b3001106faa2134604bcb08&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010112&lt;/number&gt;&lt;sys_id&gt;552c48888c033300964f4932b03eb092&lt;/sys_id&gt;&lt;short_description&gt;Assessment :  ATF Assessor&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010050&lt;/number&gt;&lt;sys_id&gt;563451031b6001106faa2134604bcbff&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0009009&lt;/number&gt;&lt;sys_id&gt;57af7aec73d423002728660c4cf6a71c&lt;/sys_id&gt;&lt;short_description&gt;Unable to access the shared folder.&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010085&lt;/number&gt;&lt;sys_id&gt;57ff1a931bac01106faa2134604bcb5f&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010036&lt;/number&gt;&lt;sys_id&gt;5afc450f1b2001106faa2134604bcb99&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010113&lt;/number&gt;&lt;sys_id&gt;5bd462971bac01106faa2134604bcbba&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010077&lt;/number&gt;&lt;sys_id&gt;5bda56db1b6c01106faa2134604bcbd7&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010159&lt;/number&gt;&lt;sys_id&gt;5d84d67b1b7c01106faa2134604bcbf6&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010088&lt;/number&gt;&lt;sys_id&gt;5e2122d31bac01106faa2134604bcbd4&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010061&lt;/number&gt;&lt;sys_id&gt;60fbb5871ba001106faa2134604bcb49&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010041&lt;/number&gt;&lt;sys_id&gt;67cf818f1b2001106faa2134604bcb5a&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010122&lt;/number&gt;&lt;sys_id&gt;69c70bdb1bec01106faa2134604bcbfb&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010058&lt;/number&gt;&lt;sys_id&gt;6d971d831b6001106faa2134604bcbd1&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010076&lt;/number&gt;&lt;sys_id&gt;714a16571ba801106faa2134604bcbe7&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010093&lt;/number&gt;&lt;sys_id&gt;7322a6931bac01106faa2134604bcbd8&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010042&lt;/number&gt;&lt;sys_id&gt;7440d14f1b2001106faa2134604bcb54&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010064&lt;/number&gt;&lt;sys_id&gt;7516ee031b2401106faa2134604bcbb1&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000057&lt;/number&gt;&lt;sys_id&gt;78271e1347c12200e0ef563dbb9a7109&lt;/sys_id&gt;&lt;short_description&gt;Performance problems with wifi&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010087&lt;/number&gt;&lt;sys_id&gt;79c066d31bac01106faa2134604bcb63&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010166&lt;/number&gt;&lt;sys_id&gt;7b48dafb1b7c01106faa2134604bcb2d&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010008&lt;/number&gt;&lt;sys_id&gt;81ef89b01b2801106faa2134604bcbd4&lt;/sys_id&gt;&lt;short_description&gt;create incident with body json&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000059&lt;/number&gt;&lt;sys_id&gt;85071a1347c12200e0ef563dbb9a71c1&lt;/sys_id&gt;&lt;short_description&gt;Unable to access team file share&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010047&lt;/number&gt;&lt;sys_id&gt;86239d8f1b2001106faa2134604bcbed&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010138&lt;/number&gt;&lt;sys_id&gt;866c51191b7001106faa2134604bcbeb&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010120&lt;/number&gt;&lt;sys_id&gt;86c54f5f1bec01106faa2134604bcb0d&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010125&lt;/number&gt;&lt;sys_id&gt;87311f131b2041106faa2134604bcbc9&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010014&lt;/number&gt;&lt;sys_id&gt;87b619f41b2801106faa2134604bcbdc&lt;/sys_id&gt;&lt;short_description&gt;create incident with body json&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010078&lt;/number&gt;&lt;sys_id&gt;888bd21f1b6c01106faa2134604bcb89&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010034&lt;/number&gt;&lt;sys_id&gt;88cb89cb1b2001106faa2134604bcb20&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010095&lt;/number&gt;&lt;sys_id&gt;8a62a2d31bac01106faa2134604bcb44&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010123&lt;/number&gt;&lt;sys_id&gt;8aa9cf5f1bec01106faa2134604bcb58&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010004&lt;/number&gt;&lt;sys_id&gt;8b9281b81be401106faa2134604bcb80&lt;/sys_id&gt;&lt;short_description&gt;create incident with body xml&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000007&lt;/number&gt;&lt;sys_id&gt;8d6353eac0a8016400d8a125ca14fc1f&lt;/sys_id&gt;&lt;short_description&gt;Need access to sales DB for the West&lt;/short_description&gt;&lt;category&gt;database&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010121&lt;/number&gt;&lt;sys_id&gt;90e68b9f1bec01106faa2134604bcb05&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010051&lt;/number&gt;&lt;sys_id&gt;90f491031b6001106faa2134604bcb05&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010150&lt;/number&gt;&lt;sys_id&gt;934a4dab1b3001106faa2134604bcb5d&lt;/sys_id&gt;&lt;short_description&gt;Created from Restassured java library&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000058&lt;/number&gt;&lt;sys_id&gt;965c9e5347c12200e0ef563dbb9a7156&lt;/sys_id&gt;&lt;short_description&gt;Performance problems with email&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010091&lt;/number&gt;&lt;sys_id&gt;96f1a2171bac01106faa2134604bcb9c&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010022&lt;/number&gt;&lt;sys_id&gt;98a312011b6441106faa2134604bcbf8&lt;/sys_id&gt;&lt;short_description&gt;Create incident with body&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010094&lt;/number&gt;&lt;sys_id&gt;99626a171bac01106faa2134604bcb71&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010035&lt;/number&gt;&lt;sys_id&gt;99cb81cb1b2001106faa2134604bcb63&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010090&lt;/number&gt;&lt;sys_id&gt;99e12a531bac01106faa2134604bcb15&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010052&lt;/number&gt;&lt;sys_id&gt;9b6595031b6001106faa2134604bcbfa&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000002&lt;/number&gt;&lt;sys_id&gt;9d385017c611228701d22104cc95c371&lt;/sys_id&gt;&lt;short_description&gt;Network file shares access issue&lt;/short_description&gt;&lt;category&gt;network&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010075&lt;/number&gt;&lt;sys_id&gt;9e68125f1b6c01106faa2134604bcb1f&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010033&lt;/number&gt;&lt;sys_id&gt;9eab09cb1b2001106faa2134604bcbe9&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010109&lt;/number&gt;&lt;sys_id&gt;9f34a2971bac01106faa2134604bcb65&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010055&lt;/number&gt;&lt;sys_id&gt;a0379d831b6001106faa2134604bcba2&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010083&lt;/number&gt;&lt;sys_id&gt;a1df12df1b6c01106faa2134604bcb95&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0001990&lt;/number&gt;&lt;sys_id&gt;a2496c05731110107418660c4cf6a711&lt;/sys_id&gt;&lt;short_description&gt;Unable to access the personal details section in payroll portal&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010097&lt;/number&gt;&lt;sys_id&gt;a2a26ad31bac01106faa2134604bcbe5&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010009&lt;/number&gt;&lt;sys_id&gt;a2ff01f01b2801106faa2134604bcb6a&lt;/sys_id&gt;&lt;short_description&gt;create incident with body json&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0009001&lt;/number&gt;&lt;sys_id&gt;a623cdb073a023002728660c4cf6a768&lt;/sys_id&gt;&lt;short_description&gt;Unable to post content on a Wiki page&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010038&lt;/number&gt;&lt;sys_id&gt;a67d450f1b2001106faa2134604bcb9f&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010054&lt;/number&gt;&lt;sys_id&gt;a80759431b6001106faa2134604bcbd1&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010111&lt;/number&gt;&lt;sys_id&gt;a83820b58f723300e7e16c7827bdeed2&lt;/sys_id&gt;&lt;short_description&gt;ATF : Test1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010043&lt;/number&gt;&lt;sys_id&gt;a8c0918f1b2001106faa2134604bcb60&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000047&lt;/number&gt;&lt;sys_id&gt;a9a16740c61122760004fe9095b7ddca&lt;/sys_id&gt;&lt;short_description&gt;Issue with email&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000046&lt;/number&gt;&lt;sys_id&gt;a9e30c7dc61122760116894de7bcc7bd&lt;/sys_id&gt;&lt;short_description&gt;Can't access SFA software&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000048&lt;/number&gt;&lt;sys_id&gt;a9e428cac61122760075710592216c58&lt;/sys_id&gt;&lt;short_description&gt;Having problems with Sales Tools performance&lt;/short_description&gt;&lt;category/&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010031&lt;/number&gt;&lt;sys_id&gt;ac0bc5c71b2001106faa2134604bcb75&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010046&lt;/number&gt;&lt;sys_id&gt;ac521d8f1b2001106faa2134604bcb4c&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010019&lt;/number&gt;&lt;sys_id&gt;ad535e011b6441106faa2134604bcbc3&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010067&lt;/number&gt;&lt;sys_id&gt;ae7843cb1b6401106faa2134604bcb85&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010032&lt;/number&gt;&lt;sys_id&gt;ae9b81cb1b2001106faa2134604bcb5d&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010119&lt;/number&gt;&lt;sys_id&gt;b213035f1bac01106faa2134604bcb75&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010018&lt;/number&gt;&lt;sys_id&gt;b30212011b6441106faa2134604bcbfd&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010114&lt;/number&gt;&lt;sys_id&gt;b505aa971bac01106faa2134604bcbc4&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010023&lt;/number&gt;&lt;sys_id&gt;b8d4168d1b2441106faa2134604bcb2b&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010101&lt;/number&gt;&lt;sys_id&gt;b92326571bac01106faa2134604bcbbe&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010003&lt;/number&gt;&lt;sys_id&gt;b97245781be401106faa2134604bcb4e&lt;/sys_id&gt;&lt;short_description&gt;create incident with body json&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010112&lt;/number&gt;&lt;sys_id&gt;bad4aa971bac01106faa2134604bcbbe&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010143&lt;/number&gt;&lt;sys_id&gt;bb254d671b3001106faa2134604bcb50&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010092&lt;/number&gt;&lt;sys_id&gt;be126ad31bac01106faa2134604bcbde&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010135&lt;/number&gt;&lt;sys_id&gt;be22de8c1b3001106faa2134604bcbe3&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010108&lt;/number&gt;&lt;sys_id&gt;be34e2971bac01106faa2134604bcbd2&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010012&lt;/number&gt;&lt;sys_id&gt;bfc5d5f01b2801106faa2134604bcb7a&lt;/sys_id&gt;&lt;short_description&gt;create incident with body json&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010016&lt;/number&gt;&lt;sys_id&gt;c0b0d2cd1b2441106faa2134604bcb0c&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010102&lt;/number&gt;&lt;sys_id&gt;c13366571bac01106faa2134604bcb39&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010048&lt;/number&gt;&lt;sys_id&gt;c18359cf1b2001106faa2134604bcb8e&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010151&lt;/number&gt;&lt;sys_id&gt;c2bb452f1b3001106faa2134604bcbec&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010118&lt;/number&gt;&lt;sys_id&gt;c5aabad31bec01106faa2134604bcb5e&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010070&lt;/number&gt;&lt;sys_id&gt;c6ca359b1b2c01106faa2134604bcb79&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010001&lt;/number&gt;&lt;sys_id&gt;c845b0b01be401106faa2134604bcbad&lt;/sys_id&gt;&lt;short_description&gt;create incident with body json&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010130&lt;/number&gt;&lt;sys_id&gt;ca70de0c1b3001106faa2134604bcb49&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010103&lt;/number&gt;&lt;sys_id&gt;cd93e6571bac01106faa2134604bcb20&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010017&lt;/number&gt;&lt;sys_id&gt;cdb152c91b2441106faa2134604bcb19&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010011&lt;/number&gt;&lt;sys_id&gt;cfa5d5f01b2801106faa2134604bcb76&lt;/sys_id&gt;&lt;short_description&gt;create incident with body json&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010084&lt;/number&gt;&lt;sys_id&gt;d5ef56931bac01106faa2134604bcb14&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000051&lt;/number&gt;&lt;sys_id&gt;d7158da0c0a8016700eef46c8d1f3661&lt;/sys_id&gt;&lt;short_description&gt;Manager can't access SAP Controlling application&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000052&lt;/number&gt;&lt;sys_id&gt;d7195138c0a8016700fd68449cfcd484&lt;/sys_id&gt;&lt;short_description&gt;SAP Financial Accounting application appears to be down&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000053&lt;/number&gt;&lt;sys_id&gt;d71b3b41c0a8016700a8ef040791e72a&lt;/sys_id&gt;&lt;short_description&gt;The SAP HR application is not accessible&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000054&lt;/number&gt;&lt;sys_id&gt;d71da88ac0a801670061eabfe4b28f77&lt;/sys_id&gt;&lt;short_description&gt;SAP Materials Management is slow or there is an outage&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000055&lt;/number&gt;&lt;sys_id&gt;d71f7935c0a8016700802b64c67c11c6&lt;/sys_id&gt;&lt;short_description&gt;SAP Sales app is not accessible&lt;/short_description&gt;&lt;category/&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010073&lt;/number&gt;&lt;sys_id&gt;d872ce1f1b2c01106faa2134604bcb5a&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010074&lt;/number&gt;&lt;sys_id&gt;d90342df1b2c01106faa2134604bcbc7&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010020&lt;/number&gt;&lt;sys_id&gt;da5312011b6441106faa2134604bcbf4&lt;/sys_id&gt;&lt;short_description&gt;Create incident with body&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010111&lt;/number&gt;&lt;sys_id&gt;da6466571bac01106faa2134604bcb40&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010025&lt;/number&gt;&lt;sys_id&gt;dad45e411b6441106faa2134604bcba6&lt;/sys_id&gt;&lt;short_description&gt;Create incident with body data 2&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010161&lt;/number&gt;&lt;sys_id&gt;db95d6fb1b7c01106faa2134604bcbed&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010156&lt;/number&gt;&lt;sys_id&gt;dbdc91a71b7001106faa2134604bcbe0&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010079&lt;/number&gt;&lt;sys_id&gt;dc0f1a1f1b6c01106faa2134604bcb43&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010155&lt;/number&gt;&lt;sys_id&gt;dddc5d671b7001106faa2134604bcba3&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010139&lt;/number&gt;&lt;sys_id&gt;defd7ce31b3001106faa2134604bcb14&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010134&lt;/number&gt;&lt;sys_id&gt;dfb1de8c1b3001106faa2134604bcbdf&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010152&lt;/number&gt;&lt;sys_id&gt;e04d496f1b3001106faa2134604bcba3&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010160&lt;/number&gt;&lt;sys_id&gt;e0a4d6fb1b7c01106faa2134604bcbe6&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010024&lt;/number&gt;&lt;sys_id&gt;e1d41e411b6441106faa2134604bcb3f&lt;/sys_id&gt;&lt;short_description&gt;Create incident with body data 1&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010086&lt;/number&gt;&lt;sys_id&gt;e57066931bac01106faa2134604bcb1b&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010106&lt;/number&gt;&lt;sys_id&gt;e6e3a6571bac01106faa2134604bcbe5&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000003&lt;/number&gt;&lt;sys_id&gt;e8caedcbc0a80164017df472f39eaed1&lt;/sys_id&gt;&lt;short_description&gt;Wireless access is down in my area&lt;/short_description&gt;&lt;category&gt;network&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010027&lt;/number&gt;&lt;sys_id&gt;e9ef9a851b6441106faa2134604bcbbc&lt;/sys_id&gt;&lt;short_description&gt;Create incident with body data 1&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010100&lt;/number&gt;&lt;sys_id&gt;eaf226571bac01106faa2134604bcbba&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010010&lt;/number&gt;&lt;sys_id&gt;ec831d341b2801106faa2134604bcb02&lt;/sys_id&gt;&lt;short_description&gt;create incident with body json&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010149&lt;/number&gt;&lt;sys_id&gt;ecb9896b1b3001106faa2134604bcbe8&lt;/sys_id&gt;&lt;short_description&gt;short&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0009005&lt;/number&gt;&lt;sys_id&gt;ed92e8d173d023002728660c4cf6a7bc&lt;/sys_id&gt;&lt;short_description&gt;Email server is down.&lt;/short_description&gt;&lt;category&gt;software&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010096&lt;/number&gt;&lt;sys_id&gt;ee82aa171bac01106faa2134604bcb4d&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000049&lt;/number&gt;&lt;sys_id&gt;ef4225a40a0a0b5700d0b8a790747812&lt;/sys_id&gt;&lt;short_description&gt;Network storage unavailable&lt;/short_description&gt;&lt;category&gt;network&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0000050&lt;/number&gt;&lt;sys_id&gt;ef43c6d40a0a0b5700c77f9bf387afe3&lt;/sys_id&gt;&lt;short_description&gt;Can't access Exchange server - is it down?&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0007001&lt;/number&gt;&lt;sys_id&gt;f12ca184735123002728660c4cf6a7ef&lt;/sys_id&gt;&lt;short_description&gt;Employee payroll application server is down.&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010164&lt;/number&gt;&lt;sys_id&gt;f1c5d23f1b7c01106faa2134604bcbe7&lt;/sys_id&gt;&lt;short_description&gt;Created using katate&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010157&lt;/number&gt;&lt;sys_id&gt;f3b2216b1b7001106faa2134604bcb52&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010062&lt;/number&gt;&lt;sys_id&gt;f4b84ecf1ba001106faa2134604bcb94&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010107&lt;/number&gt;&lt;sys_id&gt;f524e2971bac01106faa2134604bcbce&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010080&lt;/number&gt;&lt;sys_id&gt;f53f9e9f1b6c01106faa2134604bcb92&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010007&lt;/number&gt;&lt;sys_id&gt;f5c449f81be401106faa2134604bcb93&lt;/sys_id&gt;&lt;short_description&gt;create incident with body json&lt;/short_description&gt;&lt;category&gt;hardware&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010132&lt;/number&gt;&lt;sys_id&gt;f5f0d60c1b3001106faa2134604bcb21&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010059&lt;/number&gt;&lt;sys_id&gt;f91f5dc71b6001106faa2134604bcb7d&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010104&lt;/number&gt;&lt;sys_id&gt;fad3a2971bac01106faa2134604bcbac&lt;/sys_id&gt;&lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010099&lt;/number&gt;&lt;sys_id&gt;fcd2a2171bac01106faa2134604bcba5&lt;/sys_id&gt;&lt;short_description/&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010128&lt;/number&gt;&lt;sys_id&gt;fdc8cce71ba041106faa2134604bcb7e&lt;/sys_id&gt;&lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0010127&lt;/number&gt;&lt;sys_id&gt;fdfb3f1f1b6041106faa2134604bcb3e&lt;/sys_id&gt;&lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;result&gt;&lt;number&gt;INC0007002&lt;/number&gt;&lt;sys_id&gt;ff4c21c4735123002728660c4cf6a758&lt;/sys_id&gt;&lt;short_description&gt;Need access to the common drive.&lt;/short_description&gt;&lt;category&gt;inquiry&lt;/category&gt;&lt;/result&gt;&lt;/response&gt;</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">And match responseType == 'xml'</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment"># print response</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">And print response</div>
+</div>
+<div class="time-cell passed">86</div>
+</div>
+<div class="preformatted" data-parent="8">10:45:54.709 [print] &lt;response&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0009002&lt;/number&gt;&#13;
+    &lt;sys_id&gt;1c832706732023002728660c4cf6a7b9&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;My computer is not detecting the headphone device&lt;/short_description&gt;&#13;
+    &lt;category&gt;Hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000009&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46b66a40a9fe198101f243dfbc79033d&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Reset my password&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000010&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46b9490da9fe1981003c938dab89bda3&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Need Oracle 10GR2 installed&lt;/short_description&gt;&#13;
+    &lt;category&gt;database&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000011&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46c03489a9fe19810148cd5b8cbf501e&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Need new Blackberry set up&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000012&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46c88ac1a9fe1981014de1c831fbcf6d&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Customer didn't receive eFax&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000013&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46cebb88a9fe198101aee93734f9768b&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;EMAIL is slow when an attachment is involved&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000014&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46e18c0fa9fe19810066a0083f76bd56&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Missing my home directory&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000021&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46ee0924a9fe198100f1cf78c198454a&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;New employee hire&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000024&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46ee8c2fa9fe198100623592c70d643e&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Issue with a web page on wiki&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000026&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46f1784ba9fe19810018aa27fbb23482&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Seem to have an issue with my hard drive...&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000028&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46f3ee0ea9fe198100c5c0e53d5abe0b&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;My disk is still having issues. Can't delete a file&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000030&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46f6ede0a9fe198100e10154c34a0c2a&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Lost connection to the wireless network&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000032&lt;/number&gt;&#13;
+    &lt;sys_id&gt;47079b68a9fe198100a614a4c225c88d&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;EMAIL Server Down Again&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000033&lt;/number&gt;&#13;
+    &lt;sys_id&gt;470af5afa9fe198101b324dd773ef379&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;File Server is 80% full - Needs upgrade&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000034&lt;/number&gt;&#13;
+    &lt;sys_id&gt;470d51a0a9fe1981006c20c825e48933&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Does not look like a backup occurred last night&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000035&lt;/number&gt;&#13;
+    &lt;sys_id&gt;47138238a9fe1981016e3762d1fd26d4&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Reset my password&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000036&lt;/number&gt;&#13;
+    &lt;sys_id&gt;4714a2aca9fe198100ecabacf6273482&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Issue with networking&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000038&lt;/number&gt;&#13;
+    &lt;sys_id&gt;4717dfe5a9fe198100450448b2404c16&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;my PDF docs are all locked from editing&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000006&lt;/number&gt;&#13;
+    &lt;sys_id&gt;8d6246c7c0a80164012fb063cecd4ace&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Hangs when trying to print VISIO document&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000008&lt;/number&gt;&#13;
+    &lt;sys_id&gt;8d641046c0a80164000bc7c0d3ed46a0&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Printer in my office is out of toner&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000001&lt;/number&gt;&#13;
+    &lt;sys_id&gt;9c573169c611228700193229fff72400&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Can't read email&lt;/short_description&gt;&#13;
+    &lt;category&gt;network&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000004&lt;/number&gt;&#13;
+    &lt;sys_id&gt;9d3c1197c611228701cd1d94bc32d76d&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Forgot email password&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000601&lt;/number&gt;&#13;
+    &lt;sys_id&gt;9e7f9864532023004247ddeeff7b121f&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;The USB port on my PC stopped working&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0009003&lt;/number&gt;&#13;
+    &lt;sys_id&gt;9fffc328731823002728660c4cf6a742&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Cannot sign into the company portal app&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0009004&lt;/number&gt;&#13;
+    &lt;sys_id&gt;e329de99731423002728660c4cf6a73c&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Defect tracking tool is down.&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000005&lt;/number&gt;&#13;
+    &lt;sys_id&gt;e8e875b0c0a80164009dc852b4d677d5&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;CPU load high for over 10 minutes&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010072&lt;/number&gt;&#13;
+    &lt;sys_id&gt;0072821f1b2c01106faa2134604bcbc7&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010126&lt;/number&gt;&#13;
+    &lt;sys_id&gt;03403b1b1b6041106faa2134604bcb33&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010098&lt;/number&gt;&#13;
+    &lt;sys_id&gt;03b2a2171bac01106faa2134604bcba2&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010069&lt;/number&gt;&#13;
+    &lt;sys_id&gt;050f2d9f1be801106faa2134604bcb0a&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010037&lt;/number&gt;&#13;
+    &lt;sys_id&gt;092d09cb1b2001106faa2134604bcbf2&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010002&lt;/number&gt;&#13;
+    &lt;sys_id&gt;0945f4301be401106faa2134604bcb56&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body json&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010039&lt;/number&gt;&#13;
+    &lt;sys_id&gt;0e9f890f1b2001106faa2134604bcb45&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010089&lt;/number&gt;&#13;
+    &lt;sys_id&gt;0ed122d31bac01106faa2134604bcbd8&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010030&lt;/number&gt;&#13;
+    &lt;sys_id&gt;0f7505471b2001106faa2134604bcba8&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010005&lt;/number&gt;&#13;
+    &lt;sys_id&gt;0ff2c5381be401106faa2134604bcb13&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body json&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010021&lt;/number&gt;&#13;
+    &lt;sys_id&gt;13935e011b6441106faa2134604bcbc9&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010029&lt;/number&gt;&#13;
+    &lt;sys_id&gt;15d041431b2001106faa2134604bcb9c&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010165&lt;/number&gt;&#13;
+    &lt;sys_id&gt;1b08d23f1b7c01106faa2134604bcbed&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010071&lt;/number&gt;&#13;
+    &lt;sys_id&gt;1ba1069b1b2c01106faa2134604bcbf3&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010045&lt;/number&gt;&#13;
+    &lt;sys_id&gt;1c12918f1b2001106faa2134604bcb65&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010066&lt;/number&gt;&#13;
+    &lt;sys_id&gt;1d06cfc71b6401106faa2134604bcba4&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010028&lt;/number&gt;&#13;
+    &lt;sys_id&gt;1eef5e451b6441106faa2134604bcb15&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Create incident with body data 2&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010105&lt;/number&gt;&#13;
+    &lt;sys_id&gt;20e3e2971bac01106faa2134604bcbca&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010133&lt;/number&gt;&#13;
+    &lt;sys_id&gt;2121de8c1b3001106faa2134604bcbdc&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010056&lt;/number&gt;&#13;
+    &lt;sys_id&gt;22671d831b6001106faa2134604bcbcc&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010057&lt;/number&gt;&#13;
+    &lt;sys_id&gt;23771d431b6001106faa2134604bcbe2&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010068&lt;/number&gt;&#13;
+    &lt;sys_id&gt;24e99bc31ba401106faa2134604bcbb4&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010129&lt;/number&gt;&#13;
+    &lt;sys_id&gt;25ee06481b3001106faa2134604bcb91&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010116&lt;/number&gt;&#13;
+    &lt;sys_id&gt;29467a531bec01106faa2134604bcb67&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010040&lt;/number&gt;&#13;
+    &lt;sys_id&gt;29bfc14f1b2001106faa2134604bcb4e&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010117&lt;/number&gt;&#13;
+    &lt;sys_id&gt;2a1abad31bec01106faa2134604bcb5a&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010158&lt;/number&gt;&#13;
+    &lt;sys_id&gt;2c445a7b1b7c01106faa2134604bcb36&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010163&lt;/number&gt;&#13;
+    &lt;sys_id&gt;2dc5d23f1b7c01106faa2134604bcbfe&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010026&lt;/number&gt;&#13;
+    &lt;sys_id&gt;30ef96851b6441106faa2134604bcb4e&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010137&lt;/number&gt;&#13;
+    &lt;sys_id&gt;32c399111b7001106faa2134604bcba0&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010013&lt;/number&gt;&#13;
+    &lt;sys_id&gt;358619f41b2801106faa2134604bcbd7&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body json&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010162&lt;/number&gt;&#13;
+    &lt;sys_id&gt;379596fb1b7c01106faa2134604bcbd0&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Created using katate&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010082&lt;/number&gt;&#13;
+    &lt;sys_id&gt;39af56931bac01106faa2134604bcb10&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010124&lt;/number&gt;&#13;
+    &lt;sys_id&gt;3b901f131b2041106faa2134604bcbc3&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010006&lt;/number&gt;&#13;
+    &lt;sys_id&gt;3cb481b81be401106faa2134604bcb85&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body json&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010053&lt;/number&gt;&#13;
+    &lt;sys_id&gt;3d16dd031b6001106faa2134604bcb6c&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010063&lt;/number&gt;&#13;
+    &lt;sys_id&gt;3fb05a471be001106faa2134604bcbae&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010065&lt;/number&gt;&#13;
+    &lt;sys_id&gt;4359ee071b2401106faa2134604bcb2c&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010081&lt;/number&gt;&#13;
+    &lt;sys_id&gt;437fda531bac01106faa2134604bcb2a&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010060&lt;/number&gt;&#13;
+    &lt;sys_id&gt;43cf910b1b6001106faa2134604bcba4&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010049&lt;/number&gt;&#13;
+    &lt;sys_id&gt;452459cf1b2001106faa2134604bcb93&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000015&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46e2fee9a9fe19810049b49dee0daf58&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;I can't launch my VPN client since the last software update&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000016&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46e3e949a9fe19810069b824ba2c761a&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Rain is leaking on main DNS Server&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000017&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46e482d9a9fe198101d3e3f3e2a14459&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;How do I create a sub-folder&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000018&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46e57642a9fe1981000b96a5dca501ff&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Sales forecast spreadsheet is READ ONLY&lt;/short_description&gt;&#13;
+    &lt;category/&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000019&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46e8219ba9fe1981013806b6e04fed06&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Can't launch 64-bit Windows 7 virtual machine&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000020&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46edaa6aa9fe198101b9d14ced16619f&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;I need a replacement iPhone, please&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000025&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46f09e75a9fe198100f4ffd8d366d17b&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Need to add more memory to laptop&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000027&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46f4f4dfa9fe198100063e60278f76ec&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Please remove the latest hotfix from my PC&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000029&lt;/number&gt;&#13;
+    &lt;sys_id&gt;46f67787a9fe198101e06dfcf3a78e99&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;I can't get my weather report&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000031&lt;/number&gt;&#13;
+    &lt;sys_id&gt;47064b68a9fe19810186793eefffc9b7&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Need help with Remedy. Can we configure UI?&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000037&lt;/number&gt;&#13;
+    &lt;sys_id&gt;4715ab62a9fe1981018c3efb96143495&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Request for a new service&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000039&lt;/number&gt;&#13;
+    &lt;sys_id&gt;471bfbc7a9fe198101e77a3e10e5d47f&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Trouble getting to Oregon mail server&lt;/short_description&gt;&#13;
+    &lt;category&gt;network&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000040&lt;/number&gt;&#13;
+    &lt;sys_id&gt;471d4732a9fe198100affbf655e59172&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;JavaScript error on hiring page of corporate website&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000041&lt;/number&gt;&#13;
+    &lt;sys_id&gt;471eb058a9fe198100f89592e1ea93d3&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;My desk phone does not work&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000044&lt;/number&gt;&#13;
+    &lt;sys_id&gt;47204688a9fe1981011a20af100f381a&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Can't log into SAP from my laptop today&lt;/short_description&gt;&#13;
+    &lt;category/&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010044&lt;/number&gt;&#13;
+    &lt;sys_id&gt;49611d8f1b2001106faa2134604bcb46&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010131&lt;/number&gt;&#13;
+    &lt;sys_id&gt;4cc01a4c1b3001106faa2134604bcbc6&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010115&lt;/number&gt;&#13;
+    &lt;sys_id&gt;505dea971bac01106faa2134604bcb98&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010136&lt;/number&gt;&#13;
+    &lt;sys_id&gt;54f9091d1b3001106faa2134604bcb08&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010112&lt;/number&gt;&#13;
+    &lt;sys_id&gt;552c48888c033300964f4932b03eb092&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Assessment :  ATF Assessor&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010050&lt;/number&gt;&#13;
+    &lt;sys_id&gt;563451031b6001106faa2134604bcbff&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0009009&lt;/number&gt;&#13;
+    &lt;sys_id&gt;57af7aec73d423002728660c4cf6a71c&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Unable to access the shared folder.&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010085&lt;/number&gt;&#13;
+    &lt;sys_id&gt;57ff1a931bac01106faa2134604bcb5f&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010036&lt;/number&gt;&#13;
+    &lt;sys_id&gt;5afc450f1b2001106faa2134604bcb99&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010113&lt;/number&gt;&#13;
+    &lt;sys_id&gt;5bd462971bac01106faa2134604bcbba&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010077&lt;/number&gt;&#13;
+    &lt;sys_id&gt;5bda56db1b6c01106faa2134604bcbd7&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010159&lt;/number&gt;&#13;
+    &lt;sys_id&gt;5d84d67b1b7c01106faa2134604bcbf6&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010088&lt;/number&gt;&#13;
+    &lt;sys_id&gt;5e2122d31bac01106faa2134604bcbd4&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010061&lt;/number&gt;&#13;
+    &lt;sys_id&gt;60fbb5871ba001106faa2134604bcb49&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010041&lt;/number&gt;&#13;
+    &lt;sys_id&gt;67cf818f1b2001106faa2134604bcb5a&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010122&lt;/number&gt;&#13;
+    &lt;sys_id&gt;69c70bdb1bec01106faa2134604bcbfb&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010058&lt;/number&gt;&#13;
+    &lt;sys_id&gt;6d971d831b6001106faa2134604bcbd1&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010076&lt;/number&gt;&#13;
+    &lt;sys_id&gt;714a16571ba801106faa2134604bcbe7&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010093&lt;/number&gt;&#13;
+    &lt;sys_id&gt;7322a6931bac01106faa2134604bcbd8&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010042&lt;/number&gt;&#13;
+    &lt;sys_id&gt;7440d14f1b2001106faa2134604bcb54&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010064&lt;/number&gt;&#13;
+    &lt;sys_id&gt;7516ee031b2401106faa2134604bcbb1&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000057&lt;/number&gt;&#13;
+    &lt;sys_id&gt;78271e1347c12200e0ef563dbb9a7109&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Performance problems with wifi&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010087&lt;/number&gt;&#13;
+    &lt;sys_id&gt;79c066d31bac01106faa2134604bcb63&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010166&lt;/number&gt;&#13;
+    &lt;sys_id&gt;7b48dafb1b7c01106faa2134604bcb2d&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010008&lt;/number&gt;&#13;
+    &lt;sys_id&gt;81ef89b01b2801106faa2134604bcbd4&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body json&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000059&lt;/number&gt;&#13;
+    &lt;sys_id&gt;85071a1347c12200e0ef563dbb9a71c1&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Unable to access team file share&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010047&lt;/number&gt;&#13;
+    &lt;sys_id&gt;86239d8f1b2001106faa2134604bcbed&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010138&lt;/number&gt;&#13;
+    &lt;sys_id&gt;866c51191b7001106faa2134604bcbeb&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010120&lt;/number&gt;&#13;
+    &lt;sys_id&gt;86c54f5f1bec01106faa2134604bcb0d&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010125&lt;/number&gt;&#13;
+    &lt;sys_id&gt;87311f131b2041106faa2134604bcbc9&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010014&lt;/number&gt;&#13;
+    &lt;sys_id&gt;87b619f41b2801106faa2134604bcbdc&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body json&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010078&lt;/number&gt;&#13;
+    &lt;sys_id&gt;888bd21f1b6c01106faa2134604bcb89&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010034&lt;/number&gt;&#13;
+    &lt;sys_id&gt;88cb89cb1b2001106faa2134604bcb20&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010095&lt;/number&gt;&#13;
+    &lt;sys_id&gt;8a62a2d31bac01106faa2134604bcb44&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010123&lt;/number&gt;&#13;
+    &lt;sys_id&gt;8aa9cf5f1bec01106faa2134604bcb58&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010004&lt;/number&gt;&#13;
+    &lt;sys_id&gt;8b9281b81be401106faa2134604bcb80&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body xml&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000007&lt;/number&gt;&#13;
+    &lt;sys_id&gt;8d6353eac0a8016400d8a125ca14fc1f&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Need access to sales DB for the West&lt;/short_description&gt;&#13;
+    &lt;category&gt;database&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010121&lt;/number&gt;&#13;
+    &lt;sys_id&gt;90e68b9f1bec01106faa2134604bcb05&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010051&lt;/number&gt;&#13;
+    &lt;sys_id&gt;90f491031b6001106faa2134604bcb05&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010150&lt;/number&gt;&#13;
+    &lt;sys_id&gt;934a4dab1b3001106faa2134604bcb5d&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Created from Restassured java library&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000058&lt;/number&gt;&#13;
+    &lt;sys_id&gt;965c9e5347c12200e0ef563dbb9a7156&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Performance problems with email&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010091&lt;/number&gt;&#13;
+    &lt;sys_id&gt;96f1a2171bac01106faa2134604bcb9c&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010022&lt;/number&gt;&#13;
+    &lt;sys_id&gt;98a312011b6441106faa2134604bcbf8&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Create incident with body&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010094&lt;/number&gt;&#13;
+    &lt;sys_id&gt;99626a171bac01106faa2134604bcb71&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010035&lt;/number&gt;&#13;
+    &lt;sys_id&gt;99cb81cb1b2001106faa2134604bcb63&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010090&lt;/number&gt;&#13;
+    &lt;sys_id&gt;99e12a531bac01106faa2134604bcb15&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010052&lt;/number&gt;&#13;
+    &lt;sys_id&gt;9b6595031b6001106faa2134604bcbfa&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000002&lt;/number&gt;&#13;
+    &lt;sys_id&gt;9d385017c611228701d22104cc95c371&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Network file shares access issue&lt;/short_description&gt;&#13;
+    &lt;category&gt;network&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010075&lt;/number&gt;&#13;
+    &lt;sys_id&gt;9e68125f1b6c01106faa2134604bcb1f&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010033&lt;/number&gt;&#13;
+    &lt;sys_id&gt;9eab09cb1b2001106faa2134604bcbe9&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010109&lt;/number&gt;&#13;
+    &lt;sys_id&gt;9f34a2971bac01106faa2134604bcb65&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010055&lt;/number&gt;&#13;
+    &lt;sys_id&gt;a0379d831b6001106faa2134604bcba2&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010083&lt;/number&gt;&#13;
+    &lt;sys_id&gt;a1df12df1b6c01106faa2134604bcb95&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0001990&lt;/number&gt;&#13;
+    &lt;sys_id&gt;a2496c05731110107418660c4cf6a711&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Unable to access the personal details section in payroll portal&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010097&lt;/number&gt;&#13;
+    &lt;sys_id&gt;a2a26ad31bac01106faa2134604bcbe5&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010009&lt;/number&gt;&#13;
+    &lt;sys_id&gt;a2ff01f01b2801106faa2134604bcb6a&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body json&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0009001&lt;/number&gt;&#13;
+    &lt;sys_id&gt;a623cdb073a023002728660c4cf6a768&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Unable to post content on a Wiki page&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010038&lt;/number&gt;&#13;
+    &lt;sys_id&gt;a67d450f1b2001106faa2134604bcb9f&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010054&lt;/number&gt;&#13;
+    &lt;sys_id&gt;a80759431b6001106faa2134604bcbd1&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010111&lt;/number&gt;&#13;
+    &lt;sys_id&gt;a83820b58f723300e7e16c7827bdeed2&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;ATF : Test1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010043&lt;/number&gt;&#13;
+    &lt;sys_id&gt;a8c0918f1b2001106faa2134604bcb60&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000047&lt;/number&gt;&#13;
+    &lt;sys_id&gt;a9a16740c61122760004fe9095b7ddca&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Issue with email&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000046&lt;/number&gt;&#13;
+    &lt;sys_id&gt;a9e30c7dc61122760116894de7bcc7bd&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Can't access SFA software&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000048&lt;/number&gt;&#13;
+    &lt;sys_id&gt;a9e428cac61122760075710592216c58&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Having problems with Sales Tools performance&lt;/short_description&gt;&#13;
+    &lt;category/&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010031&lt;/number&gt;&#13;
+    &lt;sys_id&gt;ac0bc5c71b2001106faa2134604bcb75&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010046&lt;/number&gt;&#13;
+    &lt;sys_id&gt;ac521d8f1b2001106faa2134604bcb4c&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010019&lt;/number&gt;&#13;
+    &lt;sys_id&gt;ad535e011b6441106faa2134604bcbc3&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010067&lt;/number&gt;&#13;
+    &lt;sys_id&gt;ae7843cb1b6401106faa2134604bcb85&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010032&lt;/number&gt;&#13;
+    &lt;sys_id&gt;ae9b81cb1b2001106faa2134604bcb5d&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010119&lt;/number&gt;&#13;
+    &lt;sys_id&gt;b213035f1bac01106faa2134604bcb75&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010018&lt;/number&gt;&#13;
+    &lt;sys_id&gt;b30212011b6441106faa2134604bcbfd&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010114&lt;/number&gt;&#13;
+    &lt;sys_id&gt;b505aa971bac01106faa2134604bcbc4&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010023&lt;/number&gt;&#13;
+    &lt;sys_id&gt;b8d4168d1b2441106faa2134604bcb2b&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010101&lt;/number&gt;&#13;
+    &lt;sys_id&gt;b92326571bac01106faa2134604bcbbe&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010003&lt;/number&gt;&#13;
+    &lt;sys_id&gt;b97245781be401106faa2134604bcb4e&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body json&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010112&lt;/number&gt;&#13;
+    &lt;sys_id&gt;bad4aa971bac01106faa2134604bcbbe&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010143&lt;/number&gt;&#13;
+    &lt;sys_id&gt;bb254d671b3001106faa2134604bcb50&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010092&lt;/number&gt;&#13;
+    &lt;sys_id&gt;be126ad31bac01106faa2134604bcbde&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010135&lt;/number&gt;&#13;
+    &lt;sys_id&gt;be22de8c1b3001106faa2134604bcbe3&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010108&lt;/number&gt;&#13;
+    &lt;sys_id&gt;be34e2971bac01106faa2134604bcbd2&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010012&lt;/number&gt;&#13;
+    &lt;sys_id&gt;bfc5d5f01b2801106faa2134604bcb7a&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body json&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010016&lt;/number&gt;&#13;
+    &lt;sys_id&gt;c0b0d2cd1b2441106faa2134604bcb0c&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010102&lt;/number&gt;&#13;
+    &lt;sys_id&gt;c13366571bac01106faa2134604bcb39&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010048&lt;/number&gt;&#13;
+    &lt;sys_id&gt;c18359cf1b2001106faa2134604bcb8e&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010151&lt;/number&gt;&#13;
+    &lt;sys_id&gt;c2bb452f1b3001106faa2134604bcbec&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010118&lt;/number&gt;&#13;
+    &lt;sys_id&gt;c5aabad31bec01106faa2134604bcb5e&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010070&lt;/number&gt;&#13;
+    &lt;sys_id&gt;c6ca359b1b2c01106faa2134604bcb79&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010001&lt;/number&gt;&#13;
+    &lt;sys_id&gt;c845b0b01be401106faa2134604bcbad&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body json&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010130&lt;/number&gt;&#13;
+    &lt;sys_id&gt;ca70de0c1b3001106faa2134604bcb49&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010103&lt;/number&gt;&#13;
+    &lt;sys_id&gt;cd93e6571bac01106faa2134604bcb20&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010017&lt;/number&gt;&#13;
+    &lt;sys_id&gt;cdb152c91b2441106faa2134604bcb19&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010011&lt;/number&gt;&#13;
+    &lt;sys_id&gt;cfa5d5f01b2801106faa2134604bcb76&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body json&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010084&lt;/number&gt;&#13;
+    &lt;sys_id&gt;d5ef56931bac01106faa2134604bcb14&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000051&lt;/number&gt;&#13;
+    &lt;sys_id&gt;d7158da0c0a8016700eef46c8d1f3661&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Manager can't access SAP Controlling application&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000052&lt;/number&gt;&#13;
+    &lt;sys_id&gt;d7195138c0a8016700fd68449cfcd484&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;SAP Financial Accounting application appears to be down&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000053&lt;/number&gt;&#13;
+    &lt;sys_id&gt;d71b3b41c0a8016700a8ef040791e72a&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;The SAP HR application is not accessible&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000054&lt;/number&gt;&#13;
+    &lt;sys_id&gt;d71da88ac0a801670061eabfe4b28f77&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;SAP Materials Management is slow or there is an outage&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000055&lt;/number&gt;&#13;
+    &lt;sys_id&gt;d71f7935c0a8016700802b64c67c11c6&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;SAP Sales app is not accessible&lt;/short_description&gt;&#13;
+    &lt;category/&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010073&lt;/number&gt;&#13;
+    &lt;sys_id&gt;d872ce1f1b2c01106faa2134604bcb5a&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010074&lt;/number&gt;&#13;
+    &lt;sys_id&gt;d90342df1b2c01106faa2134604bcbc7&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010020&lt;/number&gt;&#13;
+    &lt;sys_id&gt;da5312011b6441106faa2134604bcbf4&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Create incident with body&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010111&lt;/number&gt;&#13;
+    &lt;sys_id&gt;da6466571bac01106faa2134604bcb40&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010025&lt;/number&gt;&#13;
+    &lt;sys_id&gt;dad45e411b6441106faa2134604bcba6&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Create incident with body data 2&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010161&lt;/number&gt;&#13;
+    &lt;sys_id&gt;db95d6fb1b7c01106faa2134604bcbed&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010156&lt;/number&gt;&#13;
+    &lt;sys_id&gt;dbdc91a71b7001106faa2134604bcbe0&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010079&lt;/number&gt;&#13;
+    &lt;sys_id&gt;dc0f1a1f1b6c01106faa2134604bcb43&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010155&lt;/number&gt;&#13;
+    &lt;sys_id&gt;dddc5d671b7001106faa2134604bcba3&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010139&lt;/number&gt;&#13;
+    &lt;sys_id&gt;defd7ce31b3001106faa2134604bcb14&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010134&lt;/number&gt;&#13;
+    &lt;sys_id&gt;dfb1de8c1b3001106faa2134604bcbdf&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010152&lt;/number&gt;&#13;
+    &lt;sys_id&gt;e04d496f1b3001106faa2134604bcba3&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010160&lt;/number&gt;&#13;
+    &lt;sys_id&gt;e0a4d6fb1b7c01106faa2134604bcbe6&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010024&lt;/number&gt;&#13;
+    &lt;sys_id&gt;e1d41e411b6441106faa2134604bcb3f&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Create incident with body data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010086&lt;/number&gt;&#13;
+    &lt;sys_id&gt;e57066931bac01106faa2134604bcb1b&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010106&lt;/number&gt;&#13;
+    &lt;sys_id&gt;e6e3a6571bac01106faa2134604bcbe5&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000003&lt;/number&gt;&#13;
+    &lt;sys_id&gt;e8caedcbc0a80164017df472f39eaed1&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Wireless access is down in my area&lt;/short_description&gt;&#13;
+    &lt;category&gt;network&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010027&lt;/number&gt;&#13;
+    &lt;sys_id&gt;e9ef9a851b6441106faa2134604bcbbc&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Create incident with body data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010100&lt;/number&gt;&#13;
+    &lt;sys_id&gt;eaf226571bac01106faa2134604bcbba&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010010&lt;/number&gt;&#13;
+    &lt;sys_id&gt;ec831d341b2801106faa2134604bcb02&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body json&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010149&lt;/number&gt;&#13;
+    &lt;sys_id&gt;ecb9896b1b3001106faa2134604bcbe8&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;short&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0009005&lt;/number&gt;&#13;
+    &lt;sys_id&gt;ed92e8d173d023002728660c4cf6a7bc&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Email server is down.&lt;/short_description&gt;&#13;
+    &lt;category&gt;software&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010096&lt;/number&gt;&#13;
+    &lt;sys_id&gt;ee82aa171bac01106faa2134604bcb4d&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000049&lt;/number&gt;&#13;
+    &lt;sys_id&gt;ef4225a40a0a0b5700d0b8a790747812&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Network storage unavailable&lt;/short_description&gt;&#13;
+    &lt;category&gt;network&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0000050&lt;/number&gt;&#13;
+    &lt;sys_id&gt;ef43c6d40a0a0b5700c77f9bf387afe3&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Can't access Exchange server - is it down?&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0007001&lt;/number&gt;&#13;
+    &lt;sys_id&gt;f12ca184735123002728660c4cf6a7ef&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Employee payroll application server is down.&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010164&lt;/number&gt;&#13;
+    &lt;sys_id&gt;f1c5d23f1b7c01106faa2134604bcbe7&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Created using katate&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010157&lt;/number&gt;&#13;
+    &lt;sys_id&gt;f3b2216b1b7001106faa2134604bcb52&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010062&lt;/number&gt;&#13;
+    &lt;sys_id&gt;f4b84ecf1ba001106faa2134604bcb94&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010107&lt;/number&gt;&#13;
+    &lt;sys_id&gt;f524e2971bac01106faa2134604bcbce&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010080&lt;/number&gt;&#13;
+    &lt;sys_id&gt;f53f9e9f1b6c01106faa2134604bcb92&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010007&lt;/number&gt;&#13;
+    &lt;sys_id&gt;f5c449f81be401106faa2134604bcb93&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;create incident with body json&lt;/short_description&gt;&#13;
+    &lt;category&gt;hardware&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010132&lt;/number&gt;&#13;
+    &lt;sys_id&gt;f5f0d60c1b3001106faa2134604bcb21&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010059&lt;/number&gt;&#13;
+    &lt;sys_id&gt;f91f5dc71b6001106faa2134604bcb7d&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010104&lt;/number&gt;&#13;
+    &lt;sys_id&gt;fad3a2971bac01106faa2134604bcbac&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Ths is automated test from Makaia data 1&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010099&lt;/number&gt;&#13;
+    &lt;sys_id&gt;fcd2a2171bac01106faa2134604bcba5&lt;/sys_id&gt;&#13;
+    &lt;short_description/&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010128&lt;/number&gt;&#13;
+    &lt;sys_id&gt;fdc8cce71ba041106faa2134604bcb7e&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;This is Rest Assured Automation framework - Makaia&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0010127&lt;/number&gt;&#13;
+    &lt;sys_id&gt;fdfb3f1f1b6041106faa2134604bcb3e&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Added from Cucumber&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+  &lt;result&gt;&#13;
+    &lt;number&gt;INC0007002&lt;/number&gt;&#13;
+    &lt;sys_id&gt;ff4c21c4735123002728660c4cf6a758&lt;/sys_id&gt;&#13;
+    &lt;short_description&gt;Need access to the common drive.&lt;/short_description&gt;&#13;
+    &lt;category&gt;inquiry&lt;/category&gt;&#13;
+  &lt;/result&gt;&#13;
+&lt;/response&gt;</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2:20]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [2:20]</span><span class="scenario-name">create a new incident without body </span>
+</div>
+<div class="scenario-time passed">ms: 1631</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">Given url 'https://dev113226.service-now.com/api/now/table/incident'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="9">10:45:54.722 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">And header Authorization = 'Basic YWRtaW46VHVuYUAxMjM='</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">And param sysparm_fields = 'number,sys_id,category,short_description'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">And request {}</div>
+</div>
+<div class="time-cell passed">87</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">1537</div>
+</div>
+<div class="preformatted" data-parent="13">10:45:54.818 request:
+1 &gt; POST https://dev113226.service-now.com/api/now/table/incident?sysparm_fields=number%2Csys_id%2Ccategory%2Cshort_description
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic YWRtaW46VHVuYUAxMjM=
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 2
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: dev113226.service-now.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_171)
+{}
+
+10:45:56.348 response time in milliseconds: 1302.84
+1 &lt; 201
+1 &lt; Cache-Control: no-cache,no-store,must-revalidate,max-age=-1
+1 &lt; Content-Type: application/json;charset=UTF-8
+1 &lt; Date: Sun, 09 Jan 2022 05:15:54 GMT
+1 &lt; Expires: 0
+1 &lt; Location: https://dev113226.service-now.com/api/now/table/incident/0d0916bf1b7c01106faa2134604bcb7f
+1 &lt; Pragma: no-store,no-cache
+1 &lt; Server: ServiceNow
+1 &lt; Set-Cookie: [JSESSIONID=DE5358611A7380FDEE198C1ED3C676B1; Path=/; HttpOnly; SameSite=None; Secure, glide_user=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; SameSite=None; Secure, glide_user_session=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; SameSite=None; Secure, glide_user_route=glide.84aa906d3f1f86e696bf04d5fa8bcc57; Max-Age=2147483647; Expires=Fri, 27-Jan-2090 08:30:01 GMT; Path=/; HttpOnly; SameSite=None; Secure, glide_session_store=85091A771B7C01106FAA2134604BCB5A; Max-Age=1800; Expires=Sun, 09-Jan-2022 05:45:54 GMT; Path=/; HttpOnly; SameSite=None; Secure, BIGipServerpool_dev113226=210087690.56126.0000; path=/; Httponly; Secure; SameSite=None; Secure]
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Is-Logged-In: true
+1 &lt; X-Transaction-ID: c9091a771b7c
+{"result":{"number":"INC0010167","sys_id":"0d0916bf1b7c01106faa2134604bcb7f","short_description":"","category":"inquiry"}}</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">Then status 201</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">And match responseType == 'json'</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">And print response</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="16">10:45:56.355 [print] {
+  "result": {
+    "number": "INC0010167",
+    "sys_id": "0d0916bf1b7c01106faa2134604bcb7f",
+    "short_description": "",
+    "category": "inquiry"
+  }
+}</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[3:32]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [3:32]</span><span class="scenario-name">create a new incident with body </span>
+</div>
+<div class="scenario-time passed">ms: 1643</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">Given url 'https://dev113226.service-now.com/api/now/table/incident'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="17">10:45:56.361 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref passed">18</div>
+<div class="step-cell passed">And header Authorization = 'Basic YWRtaW46VHVuYUAxMjM='</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref passed">19</div>
+<div class="step-cell passed">And param sysparm_fields = 'number,sys_id,category,short_description'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment">#And request {"short_description": "Created using katate", "category": "hardware" }</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref passed">20</div>
+<div class="step-cell passed">And header Content-Type = 'application/json'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref passed">21</div>
+<div class="step-cell passed">And request karate.readAsString('data/CreateIncident1.json')</div>
+</div>
+<div class="time-cell passed">211</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref passed">22</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">1422</div>
+</div>
+<div class="preformatted" data-parent="22">10:45:56.578 request:
+1 &gt; POST https://dev113226.service-now.com/api/now/table/incident?sysparm_fields=number%2Csys_id%2Ccategory%2Cshort_description
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic YWRtaW46VHVuYUAxMjM=
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 94
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: dev113226.service-now.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_171)
+{&#13;
+	"short_description": "create incident with body json as file",&#13;
+	"category": "hardware"&#13;
+}
+
+10:45:57.998 response time in milliseconds: 1167.50
+1 &lt; 201
+1 &lt; Cache-Control: no-cache,no-store,must-revalidate,max-age=-1
+1 &lt; Content-Type: application/json;charset=UTF-8
+1 &lt; Date: Sun, 09 Jan 2022 05:15:56 GMT
+1 &lt; Expires: 0
+1 &lt; Location: https://dev113226.service-now.com/api/now/table/incident/190916bf1b7c01106faa2134604bcbbd
+1 &lt; Pragma: no-store,no-cache
+1 &lt; Server: ServiceNow
+1 &lt; Set-Cookie: [JSESSIONID=3247A2869A5C9B5E86A8F9FA7D3D04BB; Path=/; HttpOnly; SameSite=None; Secure, glide_user=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; SameSite=None; Secure, glide_user_session=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; SameSite=None; Secure, glide_user_route=glide.84aa906d3f1f86e696bf04d5fa8bcc57; Max-Age=2147483647; Expires=Fri, 27-Jan-2090 08:30:03 GMT; Path=/; HttpOnly; SameSite=None; Secure, glide_session_store=9D09DE731B7C01106FAA2134604BCBF6; Max-Age=1800; Expires=Sun, 09-Jan-2022 05:45:56 GMT; Path=/; HttpOnly; SameSite=None; Secure, BIGipServerpool_dev113226=210087690.56126.0000; path=/; Httponly; Secure; SameSite=None; Secure]
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Is-Logged-In: true
+1 &lt; X-Transaction-ID: d109de731b7c
+{"result":{"number":"INC0010168","sys_id":"190916bf1b7c01106faa2134604bcbbd","short_description":"create incident with body json as file","category":"hardware"}}</div>
+<div class="step-row">
+<div class="step-container" id="23">
+<div class="step-ref passed">23</div>
+<div class="step-cell passed">Then status 201</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="24">
+<div class="step-ref passed">24</div>
+<div class="step-cell passed">And match responseType == 'json'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="25">
+<div class="step-ref passed">25</div>
+<div class="step-cell passed">And match response.result.short_description == 'create incident with body json as file'</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="26">
+<div class="step-ref passed">26</div>
+<div class="step-cell passed">And print response</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="26">10:45:58.004 [print] {
+  "result": {
+    "number": "INC0010168",
+    "sys_id": "190916bf1b7c01106faa2134604bcbbd",
+    "short_description": "create incident with body json as file",
+    "category": "hardware"
+  }
+}</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>
